@@ -1,0 +1,16 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: Lowess
+  description: Common installation and configuration on Linux
+  company: "Florian Dambrine"
+  license: license BSD
+  min_ansible_version: 2.3
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+  galaxy_tags:
+    - devops-360
+    - common
