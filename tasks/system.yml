@@ -40,19 +40,8 @@
 ######################################################################
 
 - name: Configure the timezone
-  template:
-    src: timezone.j2
-    dest: /etc/timezone
-    owner: root
-    group: root
-    mode: '0644'
-
-- name: Change the local time
-  copy:
-    remote_src: yes
-    src: "/usr/share/zoneinfo/{{ common_timezone }}"
-    dest: /etc/localtime
-    mode: 0644
+  timezone:
+    name: "{{ common_timezone }}"
   register: __common_localtime
 
 - name: Restart cron and rsyslog to activate the new timezone
@@ -63,4 +52,3 @@
     - cron
     - rsyslog
   when: __common_localtime | changed
-
