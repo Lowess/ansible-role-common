@@ -48,6 +48,3 @@ common_users:
     groups: app # Additional groups
     shell: /bin/bash
     comment: 'App User'
-
-
-

@@ -11,4 +11,3 @@
   environment:
     DEBIAN_FRONTEND: noninteractive
   with_items: "{{ common_apt_packages }}"
-
