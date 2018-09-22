@@ -1,8 +1,0 @@
----
-# cleanup.yml tasks file for common
-#
-
-- name: Stop apache2 server
-  service:
-    state: stopped
-    name: apache2
