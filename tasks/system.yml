@@ -7,21 +7,20 @@
 ######################################################################
 
 - name: Files and procs limits escalations (hard/soft) for root and all other users
-  lineinfile:
+  blockinfile:
     dest: /etc/security/limits.conf
-    line: "{{ item }}"
     insertafter: '^#<domain>\s*<type>\s*<item>\s*<value>'
-  with_items:
-    # Files
-    - "root  hard  nofile  65535"
-    - "root  soft  nofile  65535"
-    - "*  hard  nofile  65535"
-    - "*  soft  nofile  65535"
-    # Procs
-    - "root  hard  nproc  65535"
-    - "root  soft  nproc  65535"
-    - "*  hard  nproc  65535"
-    - "*  soft  nproc  65535"
+    block: |
+      # Files
+      root  hard  nofile  65535
+      root  soft  nofile  65535
+      *  hard  nofile  65535
+      *  soft  nofile  65535
+      # Procs
+      root  hard  nproc  65535
+      root  soft  nproc  65535
+      *  hard  nproc  65535
+      *  soft  nproc  65535
 
 - name: Uncomment pam_limits.so
   replace:
