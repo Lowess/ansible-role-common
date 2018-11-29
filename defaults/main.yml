@@ -9,23 +9,24 @@ common_apt_packages:
   - apt-show-versions
   - apt-transport-https
 
-  - tzdata
-  - ntp
-  - mailutils
   - dnsutils
+  - mailutils
+  - ntp
+  - rsyslog
+  - tzdata
 
   # Basic tools
-  - git
-  - vim
   - bash
+  - git
   - screen
   - telnet
+  - vim
 
   # Monitoring tools
-  - htop
-  - nload
   - atop
   - dstat
+  - htop
+  - nload
 
   # Python common
   - python-apt
