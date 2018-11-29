@@ -51,4 +51,4 @@
   with_items:
     - cron
     - rsyslog
-  when: __common_localtime | changed
+  when: __common_localtime is changed
