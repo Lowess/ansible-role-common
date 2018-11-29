@@ -9,6 +9,7 @@ common_apt_packages:
   - apt-show-versions
   - apt-transport-https
 
+  - tzdata
   - ntp
   - mailutils
   - dnsutils
