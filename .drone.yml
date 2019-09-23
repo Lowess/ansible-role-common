@@ -1,7 +1,8 @@
-# .drone.yml
 ---
+
 kind: pipeline
 name: ansible-ci
+
 workspace:
   base: /drone
   path: src/${DRONE_REPO}
